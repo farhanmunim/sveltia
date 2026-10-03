@@ -38,7 +38,7 @@ slug:
   lowercase: true
 
 app_title: Site CMS
-logo_url: /uploads/logo.svg
+logo_url: /uploads/headshot.png
 show_preview_links: true
 
 output:
