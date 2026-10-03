@@ -1,14 +1,15 @@
 ---
 title: Web app blueprint
 author: farhan-munim
-featured: false
+featured: true
 tags:
 - web-app
 summary: Open-source starter blueprint for web apps.
 url: https://app-blueprint.farhan.app/
 ---
 
-**Role:** Developer
+**Role:** Developer  
+**Year:** 2026
 
 ## The problem
 

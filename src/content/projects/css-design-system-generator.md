@@ -1,14 +1,15 @@
 ---
 title: CSS design system generator
 author: farhan-munim
-featured: false
+featured: true
 tags:
 - web-app
 summary: Open-source design system and token library generator.
 url: https://design-system.farhan.app/
 ---
 
-**Role:** Developer
+**Role:** Developer  
+**Year:** 2026
 
 ## The problem
 

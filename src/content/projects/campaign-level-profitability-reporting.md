@@ -1,7 +1,9 @@
 ---
 title: Campaign-level profitability reporting
 author: farhan-munim
-featured: false
+featured: true
 tags:
 - vba
 ---
+
+**Year:** 2020

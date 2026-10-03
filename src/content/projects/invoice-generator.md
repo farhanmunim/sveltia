@@ -1,14 +1,15 @@
 ---
 title: Invoice generator
 author: farhan-munim
-featured: false
+featured: true
 tags:
 - web-app
 summary: Open-source invoicing tool.
 url: https://invoicer.farhan.app/
 ---
 
-**Role:** Developer
+**Role:** Developer  
+**Year:** 2026
 
 ## The problem
 

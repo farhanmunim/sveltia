@@ -1,7 +1,7 @@
 ---
 title: London buses
 author: farhan-munim
-featured: false
+featured: true
 tags:
 - api
 - data
@@ -10,7 +10,8 @@ summary: Open-source London bus data explorer.
 url: https://london-buses.farhan.app/
 ---
 
-**Role:** Developer
+**Role:** Developer  
+**Year:** 2026
 
 ## The problem
 

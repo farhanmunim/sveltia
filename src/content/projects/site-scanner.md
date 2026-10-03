@@ -1,7 +1,7 @@
 ---
 title: Site Scanner
 author: farhan-munim
-featured: false
+featured: true
 tags:
 - scanner
 - utilities
@@ -9,7 +9,8 @@ summary: Plain-language website technology and infrastructure scanner.
 url: https://site-scanner.farhan.app/
 ---
 
-**Role:** Developer
+**Role:** Developer  
+**Year:** 2026
 
 ## The problem
 
