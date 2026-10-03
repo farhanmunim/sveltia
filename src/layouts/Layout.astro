@@ -39,6 +39,7 @@ const nav = [
     <meta property="og:url" content={canonical} />
     {imageUrl && <meta property="og:image" content={imageUrl} />}
     <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+    {!settings.allow_indexing && <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />}
     <meta name="generator" content={Astro.generator} />
     {settings.head_html && <Fragment set:html={settings.head_html} />}
   </head>

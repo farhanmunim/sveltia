@@ -430,6 +430,11 @@ singletons:
             options: [Website, GitHub, LinkedIn, X, Bluesky, Mastodon, Instagram, YouTube, Other]
           - { name: url, label: URL, widget: string, type: url }
           - { name: handle, label: Handle, widget: string, required: false }
+      - name: allow_indexing
+        label: Allow search engines to index this site
+        widget: boolean
+        default: false
+        hint: Off by default. While off, every page is sent with noindex headers and robots.txt blocks crawlers. Turn on when the site is ready to be found on Google.
       - name: analytics_url
         label: Analytics dashboard link
         widget: string

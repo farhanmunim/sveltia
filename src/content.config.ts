@@ -112,6 +112,7 @@ const settings = defineCollection({
     share_image: z.string().optional(),
     footer_text: z.string().optional(),
     social: z.array(socialLink).default([]),
+    allow_indexing: z.boolean().default(false),
     analytics_url: z.string().optional(),
     head_html: z.string().optional(),
     footer_html: z.string().optional(),
