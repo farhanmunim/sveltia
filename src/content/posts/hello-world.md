@@ -5,8 +5,6 @@ cover_alt: A sunrise over rolling hills
 excerpt: Welcome to the new site. Here is what you can expect from this blog and how it is built.
 date: 2026-09-01T09:00:00.000Z
 featured: true
-categories:
-  - news
 tags:
   - astro
   - cms
