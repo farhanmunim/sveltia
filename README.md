@@ -27,7 +27,7 @@ Sveltia CMS (/admin) ──commits──▶ GitHub repo ──build──▶ Clo
 | `src/content/authors/` | Author profiles (`*.md`) → `/authors/<slug>` |
 | `src/content/settings/site.yml` | Site Settings singleton |
 | `src/pages/` | Astro routes (file-based) |
-| `src/pages/docs.astro` | Plain-language editor guide, served at `/docs` |
+| `src/pages/docs.astro` | Public docs: architecture, deployment, sign-in and editor guide, served at `/docs` |
 | `src/pages/robots.txt.ts` | `robots.txt`, driven by the *Allow search engines to index this site* setting (off by default) |
 | `src/pages/analytics.astro` | Embeds the Umami share dashboard from Site Settings at `/analytics` |
 | `src/layouts/Layout.astro` | Site shell: head metadata, script injection, nav, footer |

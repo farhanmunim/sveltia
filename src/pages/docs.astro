@@ -2,18 +2,138 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Editor guide" description="How to edit this website.">
-  <article class="prose">
-    <h1>Editor guide</h1>
-    <p>This site is edited with <strong>Sveltia CMS</strong>, a Git-based CMS. Everything you save is stored as a file in the site's GitHub repository, and the live site rebuilds automatically after you publish.</p>
+<Layout title="Docs" description="How this website is built, hosted and edited.">
+  <article class="prose docs">
+    <h1>Docs</h1>
+    <p>How this website is built, where the code lives, how it is deployed and how editors sign in. Nothing on this page is secret: passwords, tokens and keys are never stored in the repository or shown here.</p>
 
-    <h2>Signing in</h2>
+    <nav aria-label="On this page" class="toc">
+      <a href="#overview">Overview</a>
+      <a href="#components">Components</a>
+      <a href="#code">Code and content</a>
+      <a href="#deployment">Deployment</a>
+      <a href="#auth">Sign-in</a>
+      <a href="#publishing">Publishing</a>
+      <a href="#indexing">Search engines</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#editor-guide">Editor guide</a>
+    </nav>
+
+    <h2 id="overview">Overview</h2>
+    <p>This is a <strong>static website</strong>. There is no database and no application server. Every page, post and setting is a Markdown or YAML file in a GitHub repository. A build turns those files into plain HTML, and Cloudflare serves them. The content is edited in <a href="/admin/">Sveltia CMS</a>, a browser-based editor that saves changes straight to GitHub.</p>
+<pre class="flow" aria-label="Architecture diagram">Editor's browser
+   |  opens /admin  (Sveltia CMS)
+   |  "Sign in with GitHub"
+   v
+Cloudflare Worker "sveltia-cms-auth"  &lt;--&gt;  GitHub OAuth App
+   |  returns a GitHub access token to the CMS
+   v
+Sveltia CMS  --- reads and writes files via the GitHub API --->  GitHub repository
+                                                                       |
+                                                    push to "main"     |
+                                                                       v
+                                            Cloudflare Pages: npm run build
+                                                                       |
+                                                                       v
+                                                static files on the Cloudflare CDN</pre>
+    <p>In short: <strong>CMS → GitHub commit → Cloudflare build → live site.</strong></p>
+
+    <h2 id="components">Components</h2>
+    <table>
+      <thead><tr><th>Part</th><th>What it is</th></tr></thead>
+      <tbody>
+        <tr><td>Website</td><td><a href="https://astro.build">Astro</a>, built as a static site. Pages are generated from content files.</td></tr>
+        <tr><td>CMS</td><td><a href="https://sveltiacms.app">Sveltia CMS</a>. It runs entirely in the editor's browser, loaded from a CDN by <code>/admin/</code>. It has no server of its own.</td></tr>
+        <tr><td>Content store</td><td>A GitHub repository. Git history is the version history.</td></tr>
+        <tr><td>Hosting</td><td>Cloudflare Pages, connected to the repository.</td></tr>
+        <tr><td>Auth worker</td><td>A small Cloudflare Worker, <code>sveltia-cms-auth</code>, that finishes the GitHub login.</td></tr>
+        <tr><td>Sign-in provider</td><td>A <strong>GitHub OAuth App</strong>.</td></tr>
+        <tr><td>Analytics</td><td>Self-hosted <a href="https://umami.is">Umami</a>.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="code">Code and content</h2>
+    <ul>
+      <li><strong>Repository:</strong> <code>farhanmunim/sveltia</code> on GitHub, production branch <code>main</code>.</li>
+      <li><strong>Site code:</strong> <code>src/</code> (pages, layout, components) and <code>astro.config.mjs</code>.</li>
+      <li><strong>Content:</strong> <code>src/content/</code>, with one folder per collection (pages, posts, projects, services, resources, categories, tags, authors) plus <code>settings/site.yml</code> for Site Settings.</li>
+      <li><strong>Uploads:</strong> <code>public/uploads/</code>, served at <code>/uploads/…</code>.</li>
+      <li><strong>CMS configuration:</strong> <code>public/admin/config.yml</code> defines every collection and field. The matching Astro schemas are in <code>src/content.config.ts</code>; the two must stay in step.</li>
+      <li><strong>Auth worker code:</strong> a fork of the open-source <a href="https://github.com/sveltia/sveltia-cms-auth">sveltia-cms-auth</a> project, at <code>farhanmunim/sveltia-cms-auth</code>.</li>
+    </ul>
+
+    <h3>Content types and URLs</h3>
+    <table>
+      <thead><tr><th>Collection</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>Pages</td><td><code>/&lt;slug&gt;</code></td></tr>
+        <tr><td>Posts</td><td><code>/blog/&lt;slug&gt;</code></td></tr>
+        <tr><td>Projects</td><td><code>/projects/&lt;slug&gt;</code></td></tr>
+        <tr><td>Services</td><td><code>/services/&lt;slug&gt;</code></td></tr>
+        <tr><td>Resources</td><td><code>/resources/&lt;slug&gt;</code></td></tr>
+        <tr><td>Categories</td><td><code>/category/&lt;slug&gt;</code></td></tr>
+        <tr><td>Tags</td><td><code>/tags/&lt;slug&gt;</code></td></tr>
+        <tr><td>Authors</td><td><code>/authors/&lt;slug&gt;</code></td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="deployment">Deployment</h2>
+    <h3>The website (Cloudflare Pages)</h3>
+    <ul>
+      <li>A Cloudflare Pages project is connected to the GitHub repository. Production branch: <code>main</code>.</li>
+      <li>Build command <code>npm run build</code>, output directory <code>dist</code>, Node 22 (from <code>.node-version</code>).</li>
+      <li>Every push to <code>main</code> triggers a build. Publishing in the CMS pushes to <code>main</code>, so <strong>publishing deploys the site</strong>, usually within a couple of minutes.</li>
+      <li>Cloudflare reads the repository through its own <strong>GitHub App</strong> (Cloudflare Workers and Pages), which an owner installs on the repository. This is separate from the sign-in OAuth App.</li>
+      <li>Unpublished drafts live on separate <code>cms/…</code> branches. Cloudflare builds a preview for each one; they never replace the live site.</li>
+      <li>The site is served on a custom domain, with a <code>*.pages.dev</code> address as well.</li>
+    </ul>
+
+    <h3>The auth worker (Cloudflare Workers)</h3>
+    <ul>
+      <li>Worker name <code>sveltia-cms-auth</code>, running at <code>sveltia-cms-auth.farhanmunim.workers.dev</code>.</li>
+      <li>Deployed automatically from its own GitHub repository (the fork above) with <code>wrangler deploy</code> on every push.</li>
+      <li>Configuration in the worker's repository: <code>keep_vars = true</code>, so settings entered in the Cloudflare dashboard survive redeploys, and <code>ALLOWED_DOMAINS</code>, the list of site hostnames allowed to use the worker.</li>
+      <li>Two values are stored only in Cloudflare, as <em>runtime</em> variables of the worker: the OAuth App's client ID and its client secret. They are never in a repository and never on this page.</li>
+    </ul>
+
+    <h2 id="auth">Sign-in</h2>
+    <p><strong>Type: GitHub OAuth App</strong> (not a GitHub App). The OAuth App is registered under the site owner's GitHub account. Its callback URL points at the auth worker. It exists only to let editors log in to the CMS.</p>
+    <ol>
+      <li>An editor opens <a href="/admin/">/admin/</a> and clicks <strong>Sign in with GitHub</strong>.</li>
+      <li>A popup goes to the auth worker, which redirects to GitHub.</li>
+      <li>The editor approves the OAuth App on GitHub.</li>
+      <li>GitHub sends a one-time code to the worker. The worker swaps it for an access token using the client secret, which stays in the worker.</li>
+      <li>The worker returns the token to the CMS page, but only if the page's hostname is in <code>ALLOWED_DOMAINS</code>.</li>
+      <li>The CMS uses the token to read and write the repository through the GitHub API.</li>
+    </ol>
+    <p><strong>Who can sign in:</strong> anyone with <em>write</em> access to the repository. There are no separate CMS accounts, passwords or roles; access is managed in GitHub. Repository admins can also change the CMS configuration.</p>
+    <p><strong>Alternative:</strong> the sign-in screen also offers <em>Sign In Using Access Token</em>, which uses a fine-grained GitHub personal access token limited to this repository. It needs no worker.</p>
+
+    <h2 id="publishing">Publishing workflow</h2>
+    <ul>
+      <li><strong>Pages, posts, projects, services, resources</strong> use the editorial workflow: Draft → In review → Ready → Publish. Each unpublished entry is a branch and pull request. Publishing squash-merges it into <code>main</code>.</li>
+      <li><strong>Categories, tags, authors and Site Settings</strong> save directly to <code>main</code>.</li>
+      <li>Deleting an entry opens a deletion pull request. Deleting a tag, category or author also edits every entry that uses it, directly on <code>main</code>, so delete content first and tags or authors last.</li>
+    </ul>
+
+    <h2 id="indexing">Search engines</h2>
+    <p>The site is hidden from search engines by default. Site Settings → <em>Allow search engines to index this site</em> controls it.</p>
+    <ul>
+      <li><strong>Off (default):</strong> <code>robots.txt</code> disallows everything, every page has a <code>noindex</code> tag and every response carries an <code>X-Robots-Tag: noindex</code> header.</li>
+      <li><strong>On:</strong> <code>robots.txt</code> allows crawling and the tags and header are removed. <code>/admin/</code> always stays <code>noindex</code>.</li>
+    </ul>
+
+    <h2 id="analytics">Analytics</h2>
+    <p>Visits are counted with a self-hosted Umami instance. Its tracking snippet is set in Site Settings → <em>Head scripts</em> and added to every page. An optional read-only dashboard link in Site Settings is embedded at <a href="/analytics">/analytics</a>.</p>
+
+    <h2 id="editor-guide">Editor guide</h2>
+    <h3>Signing in</h3>
     <ol>
       <li>Open <a href="/admin/">/admin/</a>.</li>
       <li>Click <strong>Sign in with GitHub</strong>. You need write access to the repository.</li>
     </ol>
 
-    <h2>What you can edit</h2>
+    <h3>What you can edit</h3>
     <ul>
       <li><strong>Pages</strong> – one-off pages such as About or Contact, served from the site root (e.g. <code>/about</code>).</li>
       <li><strong>Posts</strong> – blog posts under <code>/blog</code>, with categories, tags, a publish date and a "featured" flag.</li>
@@ -21,20 +141,28 @@ import Layout from '../layouts/Layout.astro';
       <li><strong>Categories</strong> – nested sections for posts. Set a parent to nest one category under another.</li>
       <li><strong>Tags</strong> – flat labels shared by posts, projects, services and resources. Create a tag here before using it.</li>
       <li><strong>Authors</strong> – public author profiles (name, avatar, bio, social links) shown on the site.</li>
-      <li><strong>Site Settings</strong> – site name, tagline, logo, favicon, footer text, social links, analytics link, head/footer scripts and the switch that lets search engines index the site (off by default).</li>
+      <li><strong>Site Settings</strong> – site name, tagline, logo, favicon, share image, footer text, social links, analytics link, head/footer scripts and the search-engine switch.</li>
       <li><strong>Assets</strong> (left sidebar) – the shared media library for every image and file.</li>
     </ul>
 
-    <h2>Drafts and publishing</h2>
-    <p>Pages, posts, projects, services and resources use the <strong>editorial workflow</strong>. A new entry starts as a <em>Draft</em>. Move it to <em>In review</em> and <em>Ready</em> as it progresses, then click <strong>Publish</strong>. Only published entries appear on the live site. Every version is kept in Git history.</p>
-
-    <h2>Slugs and URLs</h2>
+    <h3>Slugs and URLs</h3>
     <p>The slug (the last part of the URL) is generated from the title: lowercase, hyphenated, no accents. You can edit it in the entry sidebar before or after saving.</p>
 
-    <h2>Images and files</h2>
+    <h3>Images and files</h3>
     <p>Upload images and files through any image/file field or via <strong>Assets</strong>. Originals are stored untouched in <code>public/uploads</code>. Always fill in the alt text field next to a cover image.</p>
 
-    <h2>Deploys</h2>
+    <h3>Deploys</h3>
     <p>Publishing commits to the production branch. Cloudflare Pages notices the commit and rebuilds the site within a couple of minutes. Saving a draft does not rebuild the live site.</p>
   </article>
 </Layout>
+
+<style>
+  .docs { max-width: 50rem; }
+  .toc { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: .75rem 1rem; background: var(--bg-soft); border: 1px solid var(--line); border-radius: .5rem; font-size: .9rem; }
+  .docs h2 { margin-top: 2.5rem; padding-top: .5rem; border-top: 1px solid var(--line); }
+  .docs table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+  .docs th, .docs td { text-align: left; vertical-align: top; padding: .5rem .75rem; border: 1px solid var(--line); }
+  .docs th { background: var(--bg-soft); }
+  .docs code { background: var(--bg-soft); padding: .05rem .3rem; border-radius: .25rem; font-size: .9em; }
+  .docs pre.flow { background: var(--bg-soft); border: 1px solid var(--line); border-radius: .5rem; padding: 1rem; overflow: auto; font-size: .8rem; line-height: 1.4; }
+</style>
