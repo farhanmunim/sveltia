@@ -1,6 +1,5 @@
 ---
 title: Getting started with Astro content collections
-author: sam-lee
 cover_alt: Stylised rocket icon on a dark background
 excerpt: Content collections give your Markdown and YAML files a schema, type-safety and a query API.
 date: 2026-09-10T14:30:00.000Z

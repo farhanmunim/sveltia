@@ -1,6 +1,5 @@
 ---
 title: Astro documentation
-author: sam-lee
 featured: false
 description: The official Astro docs. Start with the "Getting started" guide.
 url: https://docs.astro.build

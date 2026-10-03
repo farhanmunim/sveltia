@@ -1,6 +1,5 @@
 ---
 title: Community library catalogue
-author: sam-lee
 featured: false
 cover_alt: Rows of books on a shelf
 summary: A searchable catalogue for a volunteer-run library, generated from a spreadsheet.

@@ -1,6 +1,5 @@
 ---
 title: About
-author: jane-doe
 cover_alt: Abstract illustration of overlapping shapes
 description: Learn about Acme Studio, a small team building fast and accessible websites.
 ---

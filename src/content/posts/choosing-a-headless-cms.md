@@ -1,6 +1,5 @@
 ---
 title: Choosing a headless CMS for a static site
-author: jane-doe
 excerpt: Git-based, API-based or self-hosted? A short guide to picking the right kind of CMS for a static site.
 date: 2026-09-20T08:15:00.000Z
 featured: false

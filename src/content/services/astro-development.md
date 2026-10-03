@@ -1,6 +1,5 @@
 ---
 title: Astro development
-author: sam-lee
 featured: false
 summary: Static-first builds with Astro, deployed to Cloudflare Pages.
 ---

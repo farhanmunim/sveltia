@@ -1,6 +1,5 @@
 ---
 title: Acme Storefront
-author: jane-doe
 featured: true
 cover_alt: Illustration of a shop front with an awning
 summary: A fast, static storefront for a small retailer, rebuilt from a slow WordPress theme.

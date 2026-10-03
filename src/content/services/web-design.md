@@ -1,6 +1,5 @@
 ---
 title: Web design
-author: jane-doe
 featured: true
 cover_alt: Colour swatches and a pencil
 summary: Accessible, brand-led design for marketing sites and small web apps.
