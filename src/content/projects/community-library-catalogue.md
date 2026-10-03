@@ -2,8 +2,6 @@
 title: Community library catalogue
 author: sam-lee
 featured: false
-tags:
-  - performance
 cover_alt: Rows of books on a shelf
 summary: A searchable catalogue for a volunteer-run library, generated from a spreadsheet.
 url: https://library.acme.example
