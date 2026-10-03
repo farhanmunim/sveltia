@@ -10,7 +10,7 @@ backend:
   branch: main
   # OAuth: URL of your deployed Sveltia CMS Authenticator (Cloudflare Worker).
   # See README.md "Manual setup". Replace with your own worker URL.
-  base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
+  base_url: https://sveltia-cms-auth.farhanmunim.workers.dev
   # Editorial Workflow: publish drafts with a squash merge to keep history tidy.
   squash_merges: true
   # Cloudflare Pages builds automatically on every push to the production branch.
