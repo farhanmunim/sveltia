@@ -1,10 +1,10 @@
 ---
 title: About
 author: jane-doe
-cover: /uploads/cover-about.svg
 cover_alt: Abstract illustration of overlapping shapes
 description: Learn about Acme Studio, a small team building fast and accessible websites.
 ---
+
 ## Who we are
 
 Acme Studio is a small team of designers and developers. We build websites that are **fast**, **accessible** and easy to maintain.

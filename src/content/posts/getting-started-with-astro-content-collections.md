@@ -1,7 +1,6 @@
 ---
 title: Getting started with Astro content collections
 author: sam-lee
-cover: /uploads/cover-astro.svg
 cover_alt: Stylised rocket icon on a dark background
 excerpt: Content collections give your Markdown and YAML files a schema, type-safety and a query API.
 date: 2026-09-10T14:30:00.000Z
@@ -12,6 +11,7 @@ tags:
   - astro
   - performance
 ---
+
 Astro's content collections turn a folder of Markdown or YAML files into a typed data source.
 
 ## Define a collection

@@ -6,8 +6,8 @@ tags:
   - performance
   - design
 description: A printable checklist covering SEO, accessibility and performance basics before you launch.
-attachment: /uploads/website-launch-checklist.pdf
 ---
+
 Download the checklist and work through it before every launch. It covers:
 
 - Meta titles and descriptions
