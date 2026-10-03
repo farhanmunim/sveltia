@@ -5,7 +5,7 @@
 backend:
   name: github
   # GitHub repository that stores the content (owner/repo)
-  repo: farhanmunim/keystatic
+  repo: farhanmunim/sveltia
   # Production branch. Cloudflare Pages builds this branch into the live site.
   branch: main
   # OAuth: URL of your deployed Sveltia CMS Authenticator (Cloudflare Worker).
