@@ -1,0 +1,21 @@
+---
+title: How to increase WordPress memory limit
+author: farhan-munim
+excerpt: Want to easily increase the WordPress memory limit? Here’s the proper way to do it.
+date: '2024-02-13T14:36:00.000Z'
+featured: false
+categories:
+- technical
+tags:
+- wordpress
+---
+
+1. Open your WordPress files via the file manager inside of your hosting or FTP.
+2. Locate the `wp-config.php` file which should be in the root (very top) of your website hierarchy and open to edit
+3. Locate the area which says `/* Add any custom values between this line and the “stop editing” line. */` and paste in the snippet below this post just below this this (adjust the memory size as required) and then save!
+
+```
+define( 'WP_MEMORY_LIMIT', '64M' );
+```
+
+Whether you use Bricks Builder or not, [here](https://academy.bricksbuilder.io/article/requirements/#wp-memory-limit) is a great post from the Bricks team to increase other limits.

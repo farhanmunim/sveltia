@@ -1,0 +1,31 @@
+---
+title: Invoice generator
+author: farhan-munim
+featured: false
+tags:
+- web-app
+summary: Open-source invoicing tool.
+url: https://invoicer.farhan.app/
+---
+
+**Role:** Developer
+
+## The problem
+
+Creating invoices shouldn’t require complex software, but most tools are either overbuilt or locked behind accounts and subscriptions. For simple use cases, this adds unnecessary friction. The aim of this project was to strip things back and provide a quick, no-signup way to generate clean, professional invoices.
+
+## The approach
+
+I built a minimal web app that lets users create invoices directly in the browser. Users can enter basic details, add line items, and instantly generate a formatted invoice. The focus was on speed and simplicity – no accounts, no clutter, just a straightforward interface that does one job well. Everything is handled client-side to keep the experience fast and lightweight.
+
+## The outcome
+
+The result is a fast, no-friction tool that allows users to generate invoices in seconds. It removes the need for complex platforms for simple tasks and keeps the workflow focused and efficient. As a project, it demonstrates an ability to prioritise usability, reduce unnecessary complexity, and build focused tools that solve a clear problem.
+
+## Key results
+
+- **<60s** To a finished invoice
+- **0** Accounts required
+- **0 kb** Data transmitted
+
+[github.com](https://github.com/farhanmunim/invoicer)

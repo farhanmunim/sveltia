@@ -1,0 +1,8 @@
+---
+title: Contract revenue projection with indexation model
+author: farhan-munim
+featured: false
+tags:
+- excel
+- power-query
+---

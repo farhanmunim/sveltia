@@ -1,0 +1,14 @@
+---
+title: 'Solved: Where are LocalWP Blueprints saved? (Windows)'
+author: farhan-munim
+excerpt: Want to manually back up your LocalWP blueprints? Here’s where to find it on Windows!
+date: '2024-07-19T07:55:33.000Z'
+featured: false
+categories:
+- technical
+tags:
+- wordpress
+---
+
+1. On Windows, click `Start` (Windows) > `Run` > enter `%appdata%`
+2. Navigate to the `Local` folder > `blueprints` folder

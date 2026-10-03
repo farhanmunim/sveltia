@@ -1,6 +1,7 @@
-name: Farhan Munim
-description: Farhan Munim is a seasoned analyst and developer based in London, UK.
-footer_text: © 2026 Farhan Munim
+---
+first_name: Farhan
+last_name: Munim
+avatar: /uploads/headshot.png
 social:
 - platform: GitHub
   url: https://github.com/farhanmunim
@@ -10,3 +11,6 @@ social:
   url: https://youtube.com/@farhan-app
 - platform: Other
   url: https://buymeacoffee.com/farhan.app
+---
+
+Farhan Munim is a seasoned analyst and developer based in London, UK.

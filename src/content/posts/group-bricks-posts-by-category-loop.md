@@ -1,0 +1,29 @@
+---
+title: Group Bricks posts by category (loop)
+author: farhan-munim
+excerpt: Here are the queries required to list your Bricks post loop items, grouped by category!
+date: '2025-06-04T23:22:03.000Z'
+featured: false
+categories:
+- technical
+tags:
+- bricks-builder
+---
+
+## Desired result
+
+![](/uploads/image-1.png)
+
+## Structure
+
+![](/uploads/image-2.png)
+
+## Query 1: Outer
+
+![](/uploads/image-3.png)
+
+## Query 2: Inner / Nested
+
+![](/uploads/image-4.png)
+
+![](/uploads/image-5.png)

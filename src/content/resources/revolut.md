@@ -1,0 +1,9 @@
+---
+title: Revolut
+author: farhan-munim
+featured: false
+tags:
+- banking
+description: My go-to banking app for travel, subscriptions, and managing money across currencies.
+url: https://revolut.com/referral/?referral-code=farhanak5p!MAY1-26-VR-GB&geo-redirect
+---

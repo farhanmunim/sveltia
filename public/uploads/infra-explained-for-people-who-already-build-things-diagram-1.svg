@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Diagram: your laptop connects to a server in a data centre over SSH, encrypted, on port 22" role="img" style="display:block;width:100%;max-width:560px;height:auto;margin:0 auto" viewbox="0 0 560 150">
+<defs><marker id="arrA" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="currentColor" fill-opacity=".55"></path></marker></defs>
+<rect class="box" fill="currentColor" fill-opacity=".05" height="60" rx="8" stroke="currentColor" stroke-opacity=".28" width="150" x="20" y="45"></rect>
+<text fill="currentColor" font-size="12" text-anchor="middle" x="95" y="70">Your laptop</text>
+<text class="t-muted" fill="currentColor" fill-opacity=".65" font-size="11" text-anchor="middle" x="95" y="88">a terminal window</text>
+<rect class="box-accent" fill="#2563eb" fill-opacity=".1" height="80" rx="8" stroke="#2563eb" width="150" x="390" y="35"></rect>
+<text fill="currentColor" font-size="12" text-anchor="middle" x="465" y="63">A server</text>
+<text class="t-muted" fill="currentColor" fill-opacity=".65" font-size="11" text-anchor="middle" x="465" y="81">always-on computer</text>
+<text class="t-muted" fill="currentColor" fill-opacity=".65" font-size="11" text-anchor="middle" x="465" y="97">in a data centre</text>
+<line class="arrow" fill="none" marker-end="url(#arrA)" stroke="currentColor" stroke-opacity=".55" stroke-width="1.5" x1="175" x2="383" y1="75" y2="75"></line>
+<text class="t-accent" fill="#2563eb" font-size="12" font-weight="600" text-anchor="middle" x="279" y="62">SSH</text>
+<text class="t-muted" fill="currentColor" fill-opacity=".65" font-size="11" text-anchor="middle" x="279" y="95">typed commands, encrypted</text>
+</svg>

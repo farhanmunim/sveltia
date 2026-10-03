@@ -1,0 +1,33 @@
+---
+title: List all post categories with post count
+author: farhan-munim
+excerpt: Here’s a quick snippet to list all WordPress post categories and the number of posts within the categories.
+date: '2024-07-29T08:50:11.000Z'
+featured: false
+categories:
+- technical
+tags:
+- wordpress
+---
+
+Simply copy and paste the following snippet into a code block. It already cycles through all posts so do not put this into a repeater/loop.
+
+```
+<?php
+$categories = get_categories(array(
+    'orderby' => 'name',
+    'order'   => 'ASC'
+));
+
+if (!empty($categories)) {
+    echo '<ul>';
+    foreach($categories as $category) {
+        $category_link = get_category_link($category->term_id);
+        echo '<li><a href="' . esc_url($category_link) . '">' . $category->name . ' (' . $category->count . ')</a></li>';
+    }
+    echo '</ul>';
+} else {
+    echo '<p>No categories found.</p>';
+}
+?>
+```
