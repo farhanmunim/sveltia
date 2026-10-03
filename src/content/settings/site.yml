@@ -1,6 +1,9 @@
 name: Farhan Munim
 tagline: Analyst & developer
 description: Farhan Munim is an analyst and developer based in London, building models, dashboards, automations and systems across finance, data and the web.
+logo: /uploads/headshot.png
+favicon: /uploads/favicon.svg
+share_image: /uploads/og-banner.png
 footer_text: © 2026 Farhan Munim
 social:
 - platform: GitHub
@@ -11,3 +14,4 @@ social:
   url: https://youtube.com/@farhan-app
 - platform: Other
   url: https://buymeacoffee.com/farhan.app
+head_html: <script defer src="https://mochi.farhan.app/script.js" data-website-id="f5199596-30d0-48cd-80c0-de67712fbac3"></script>
