@@ -10,9 +10,7 @@ tags:
 - wordpress
 ---
 
-![Diagram](/uploads/an-awesome-free-way-to-organise-your-code-diagram-1.svg)
-
-This method suits my workflow but you may prefer a plugin solution like WPCodebox!
+> **Warning:** This method suits my workflow but you may prefer a plugin solution like WPCodebox!
 
 ## Why did I go down this route?
 
@@ -28,9 +26,7 @@ As aforementioned, since I have been writing a lot more custom CSS, and I even s
 
 As with many tech solutions, everything seemed to be moving towards a subscription model and I did not want to use a subscription-based paid solution just to organise some code when I can do it myself using my code editor of choice – which is what I prefer anyways.
 
-![Diagram](/uploads/an-awesome-free-way-to-organise-your-code-diagram-2.svg)
-
-There are AMAZING paid solutions such as WPCodebox. Most people will go down this route and I don’t blame you!
+> **Warning:** There are AMAZING paid solutions such as WPCodebox. Most people will go down this route and I don’t blame you!
 
 ## Requirements
 
@@ -43,9 +39,7 @@ Here are the tools I use:
 
 Whilst I am using [Bricks Builder](https://bricksbuilder.io/) and have categorised this post as a Bricks post, you can actually use any builder + subsequent child theme.
 
-![Diagram](/uploads/an-awesome-free-way-to-organise-your-code-diagram-3.svg)
-
-I am only going to use SASS to consolidate my organised CSS together, and nothing more. SASS is extremely powerful and I highly recommend learning more about it.
+> **Warning:** I am only going to use SASS to consolidate my organised CSS together, and nothing more. SASS is extremely powerful and I highly recommend learning more about it.
 
 ## Child Theme
 
@@ -59,9 +53,7 @@ Installing a child theme is the same as installing any other. Go to wp-admin > A
 
 FTP is a method of connecting to your server files from your machine.
 
-![Diagram](/uploads/an-awesome-free-way-to-organise-your-code-diagram-4.svg)
-
-You may want to consider using SFTP!
+> **Warning:** You may want to consider using SFTP!
 
 ### Creating an FTP account in your server
 

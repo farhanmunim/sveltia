@@ -181,6 +181,4 @@ Here is the version I re-created using Bricks (you can simply copy and paste int
 }
 ```
 
-![Diagram](/uploads/expanding-button-menu-on-scroll-diagram-1.svg)
-
-You need to manually set the expanded width of the inner-menu to ensure the transition works (you can automate this with JavaScript but it does not work effectively).
+> **Warning:** You need to manually set the expanded width of the inner-menu to ensure the transition works (you can automate this with JavaScript but it does not work effectively).

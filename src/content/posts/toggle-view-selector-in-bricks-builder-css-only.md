@@ -28,9 +28,7 @@ The icons you see are simply radio buttons. Once a radio button is checked, ther
 
 Copy the JSON code below into your builder panel and modify as required. For added safety, the existing SVG’s I used won’t copy over into the component.
 
-![Diagram](/uploads/toggle-view-selector-in-bricks-builder-css-only-diagram-1.svg)
-
-SVG’s may not copy across for security measures – this is normal – simply replace the SVG’s with your own.
+> **Warning:** SVG’s may not copy across for security measures – this is normal – simply replace the SVG’s with your own.
 
 ```
 {

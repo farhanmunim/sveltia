@@ -10,9 +10,7 @@ tags:
 - email
 ---
 
-![Diagram](/uploads/how-to-get-your-siteground-email-account-working-with-cloudflare-domain-diagram-1.svg)
-
-The best solution is to use a dedicated email service. However, most beginners will use the email service provided with their shared hosting – this post is directed more for them. To follow the steps, you need to set up your Siteground email address and Cloudflare access before proceeding.
+> **Warning:** The best solution is to use a dedicated email service. However, most beginners will use the email service provided with their shared hosting – this post is directed more for them. To follow the steps, you need to set up your Siteground email address and Cloudflare access before proceeding.
 
 ## Basic Steps
 

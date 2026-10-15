@@ -10,9 +10,7 @@ tags:
 - tech-troubleshooting
 ---
 
-![Diagram](/uploads/solved-how-to-boot-into-installation-media-usb-on-asus-rog-x13-laptop-diagram-1.svg)
-
-Only follow these steps if you have already made an installation media and know what you are doing!
+> **Warning:** Only follow these steps if you have already made an installation media and know what you are doing!
 
 1. Completely shutdown your ASUS ROG X13 laptop
 2. Now insert the Installation Media USB / boot drive into your laptop whilst the power is off

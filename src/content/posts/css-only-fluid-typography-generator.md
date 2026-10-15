@@ -10,9 +10,7 @@ tags:
 - web-development
 ---
 
-![Diagram](/uploads/css-only-fluid-typography-generator-diagram-1.svg)
-
-I actually came up with this a few weeks ago but I finally came around to doing the write-up – check-out [my GitHub repo](https://github.com/farhanmunim/wordpress) for more random WordPress snippets.
+> **Note:** I actually came up with this a few weeks ago but I finally came around to doing the write-up – check-out [my GitHub repo](https://github.com/farhanmunim/wordpress) for more random WordPress snippets.
 
 Just to clarify, there are some fantastic online tools like [webSemantics](https://websemantics.uk/tools/responsive-font-calculator/) and [Utopia](https://utopia.fyi/type/calculator/) that make creating responsive typography super simple. They’re great for quickly testing values and seeing changes right away, especially if you’re just starting out.
 
@@ -122,6 +120,4 @@ body {
 }
 ```
 
-![Diagram](/uploads/css-only-fluid-typography-generator-diagram-2.svg)
-
-Disclaimer: Although I came up with this solution, I used AI to help with the negative offset requirement.
+> **Warning:** Disclaimer: Although I came up with this solution, I used AI to help with the negative offset requirement.

@@ -23,9 +23,7 @@ Each extra script or style sheet is another HTTP request, more bytes over the wi
 3. Assign the field group to *Posts* (or any CPT).
 4. Check a toggle → corresponding script loads; leave unchecked → script never touches the DOM.
 
-![Diagram](/uploads/how-to-conditionally-enqueue-wordpress-scripts-and-styles-diagram-1.svg)
-
-Pro-tip: Most field plugins (ACF, CMB2, Carbon Fields) expose a similar boolean control.
+> **Note:** Pro-tip: Most field plugins (ACF, CMB2, Carbon Fields) expose a similar boolean control.
 
 Example of my setup here:
 

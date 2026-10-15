@@ -10,9 +10,7 @@ tags:
 - bricks-builder
 ---
 
-![Diagram](/uploads/remember-active-nested-tab-in-bricks-diagram-1.svg)
-
-This works fine with Bricks 1.11.1.1, but you should check the functionality if Bricks has a new update.
+> **Warning:** This works fine with Bricks 1.11.1.1, but you should check the functionality if Bricks has a new update.
 
 Copy and paste the snippet below into the **Body (footer) scripts** area and **not** a code block. Make sure to replace `.my-element` with your element’s class:
 

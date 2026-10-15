@@ -10,9 +10,7 @@ tags:
 - finance
 ---
 
-![Diagram](/uploads/the-ultimate-acca-strategic-business-leadership-sbl-gpt-mentor-diagram-1.svg)
-
-Knowledge is based on December 2024 syllabus!
+> **Warning:** Knowledge is based on December 2024 syllabus!
 
 Preparing for the ACCA Strategic Business Leader (SBL) exam can feel overwhelming with its mix of real-world case studies and strategic decision-making requirements. That’s why I’ve created ACCA SBL Mentor GPT—a personalized study assistant designed to help you navigate these challenges. Whether you need help analyzing complex case scenarios, mastering strategic frameworks, or improving your exam technique, this tool provides clear, actionable insights tailored to the SBL syllabus. It’s like having a mentor at your fingertips, guiding you every step of the way toward exam success.
 

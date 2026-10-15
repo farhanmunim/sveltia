@@ -10,9 +10,7 @@ tags:
 - wordpress
 ---
 
-![Diagram](/uploads/wordpress-post-views-count-without-plugins-diagram-1.svg)
-
-This method obfuscates IP addresses using a hashing function which creates a unique, non-reversible string for tracking purposes.
+> **Note:** This method obfuscates IP addresses using a hashing function which creates a unique, non-reversible string for tracking purposes.
 
 I will be sharing a cookie version shortly as an alternative.
 
@@ -109,9 +107,7 @@ To output the count, simply drop the following snippet into a code-block element
 <span class="post-views"><?php echo get_post_views(get_the_ID()); ?></span>
 ```
 
-![Diagram](/uploads/wordpress-post-views-count-without-plugins-diagram-2.svg)
-
-If you are using Bricks Builder, then you need to [explicitly allow the function.](https://academy.bricksbuilder.io/article/filter-bricks-code-echo_function_names/)
+> **Note:** If you are using Bricks Builder, then you need to [explicitly allow the function.](https://academy.bricksbuilder.io/article/filter-bricks-code-echo_function_names/)
 
 ## Clear the post view counter
 

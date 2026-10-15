@@ -10,9 +10,7 @@ tags:
 - wordpress
 ---
 
-![Diagram](/uploads/add-cloudflare-turnstile-to-wordpress-login-without-plugins-diagram-1.svg)
-
-You might want to customize your WordPress login page or create a custom login form for enhanced security and branding. If you already do, this solution probably isn’t for you. Whilst this method does hook into the standard WordPress authentication, custom login flows may not work.
+> **Warning:** You might want to customize your WordPress login page or create a custom login form for enhanced security and branding. If you already do, this solution probably isn’t for you. Whilst this method does hook into the standard WordPress authentication, custom login flows may not work.
 
 ## Why use Turnstile?
 
